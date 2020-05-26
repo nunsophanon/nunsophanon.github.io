@@ -31,4 +31,4 @@ navigator.bluetooth.requestDevice({
     });
   });
 });
-}
+};
