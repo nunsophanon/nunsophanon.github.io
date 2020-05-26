@@ -2,7 +2,7 @@ function connectAPI(){
 // １．BLEデバイスをスキャンする
 navigator.bluetooth.requestDevice({
   acceptAllDevices:true, // 全てのデバイスを対象にスキャンを実施する
-  optionalServices:['org.bluetooth.service.phone_alert_status']
+  optionalServices:['0x1809'] //Health Thermometer
 }).then(device => {
 
   // ２．デバイスに接続
