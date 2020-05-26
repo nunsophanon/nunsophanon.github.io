@@ -11,12 +11,12 @@ navigator.bluetooth.requestDevice({
 }).then(server =>{
 
   // ３-1．「Service」を指定
-  return server.getPrimaryService("ServiceのUniform Type Identifierを指定");
+  return server.getPrimaryService("battery_service");
 
 }).then(service =>{
 
   // ３-2．「Characteristc」を指定
-  return service.getCharacteristic("CharacteristcのUniform Type Identifierを指定");
+  return service.getCharacteristic("temperature_celsius");
 
 }).then((characteristic)  => {
 
