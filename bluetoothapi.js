@@ -2,7 +2,7 @@ function connectAPI(){
 // １．BLEデバイスをスキャンする
 navigator.bluetooth.requestDevice({
   acceptAllDevices:true, // 全てのデバイスを対象にスキャンを実施する
-  optionalServices:['利用するServiceのUniform Type Identifierを予め指定する']
+  
 }).then(device => {
 
   // ２．デバイスに接続
