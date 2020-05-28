@@ -7,8 +7,8 @@ navigator.bluetooth.requestDevice({
 
   // ２．デバイスに接続
   // return device.gatt.connect();
-  const server = await device.gatt.connect();
-  const service = await server.getPrimaryService("battery_service");
+  const server = device.gatt.connect();
+  const service = server.getPrimaryService("battery_service");
   console.log("--------------battery",service);
   return server;
 }).then(server =>{
